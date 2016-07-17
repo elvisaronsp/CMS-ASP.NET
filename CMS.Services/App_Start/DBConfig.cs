@@ -10,8 +10,8 @@
     {
         public static void Initialize()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Data.DbContext, Data.Migrations.Configuration>());
-            Data.DbContext.Create().Database.Initialize(true);
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Data.CMSDbContext, Data.Migrations.Configuration>());
+            Data.CMSDbContext.Create().Database.Initialize(true);
         }
     }
 }

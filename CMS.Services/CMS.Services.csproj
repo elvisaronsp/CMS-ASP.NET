@@ -204,6 +204,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\MenusController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +229,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CMS.Common\CMS.Common.csproj">
+      <Project>{fbc63d62-d572-4130-8a8d-63fb7abe8d34}</Project>
+      <Name>CMS.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CMS.Models\CMS.Models.csproj">
       <Project>{C22ECB25-C49C-4B47-AD68-5804B0888D39}</Project>
       <Name>CMS.Models</Name>
