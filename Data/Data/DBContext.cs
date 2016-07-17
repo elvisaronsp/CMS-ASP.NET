@@ -19,5 +19,5 @@ namespace Data
         {
             return new DbContext();
         }
-    }
+    } 
 }
