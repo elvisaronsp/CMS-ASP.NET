@@ -10,24 +10,31 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using CMS.Models;
 using Data;
+using CMS.DataServices.Contracts;
+using CMS.DataServices;
 
 namespace CMS.Services.Controllers
 {
     public class MenusController : ApiController
     {
-        private CMSDbContext db = new CMSDbContext();
+        private readonly IMenuService menu;
+
+        public MenusController(IMenuService menu)
+        {
+            this.menu = menu;
+        }
 
         // GET: api/Menus
         public IQueryable<Menu> GetMenus()
         {
-            return db.Menus;
+            return menu.All();
         }
 
         // GET: api/Menus/5
         [ResponseType(typeof(Menu))]
         public IHttpActionResult GetMenu(Guid id)
         {
-            Menu menu = db.Menus.Find(id);
+            Menu menu = this.menu.GetById(id);
             if (menu == null)
             {
                 return NotFound();
@@ -49,25 +56,8 @@ namespace CMS.Services.Controllers
             {
                 return BadRequest();
             }
-
-            db.Entry(menu).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MenuExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
+            this.menu.Update(menu);
+          
             return StatusCode(HttpStatusCode.NoContent);
         }
 
@@ -80,11 +70,11 @@ namespace CMS.Services.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Menus.Add(menu);
-
+           var menuId =  this.menu.Add(menu);
+            
             try
             {
-                db.SaveChanges();
+                return this.Ok(menuId);
             }
             catch (DbUpdateException)
             {
@@ -105,30 +95,27 @@ namespace CMS.Services.Controllers
         [ResponseType(typeof(Menu))]
         public IHttpActionResult DeleteMenu(Guid id)
         {
-            Menu menu = db.Menus.Find(id);
-            if (menu == null)
-            {
+            if(!menu.Delete(id))
                 return NotFound();
-            }
 
-            db.Menus.Remove(menu);
-            db.SaveChanges();
-
-            return Ok(menu);
+            return Ok();
         }
 
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                menu.Dispose();
             }
             base.Dispose(disposing);
         }
 
         private bool MenuExists(Guid id)
         {
-            return db.Menus.Count(e => e.Id == id) > 0;
+            if (menu.GetById(id) != null)
+                return true;
+            else
+                return false;
         }
     }
 }

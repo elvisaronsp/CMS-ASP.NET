@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Services", "CMS.Services\CMS.Services.csproj", "{C5811549-2D3F-420C-80C1-78818796B535}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Service", "CMS.Services\CMS.Service.csproj", "{C5811549-2D3F-420C-80C1-78818796B535}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{65ABD42F-4A40-4EB6-9745-0A0F72DCF737}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Data", "Data\Data\CMS.Data.csproj", "{46E9FC91-0312-4FF9-8048-C373E7166AB5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Common", "CMS.Common\CMS.Common.csproj", "{FBC63D62-D572-4130-8A8D-63FB7ABE8D34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A3F0C300-5C38-4C41-83A6-DA3446069E37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.DataServices", "CMS.DataServices\CMS.DataServices.csproj", "{894D4609-9D7B-40CC-93EB-12693E109843}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,10 @@ Global
 		{FBC63D62-D572-4130-8A8D-63FB7ABE8D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBC63D62-D572-4130-8A8D-63FB7ABE8D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBC63D62-D572-4130-8A8D-63FB7ABE8D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894D4609-9D7B-40CC-93EB-12693E109843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894D4609-9D7B-40CC-93EB-12693E109843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894D4609-9D7B-40CC-93EB-12693E109843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894D4609-9D7B-40CC-93EB-12693E109843}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,5 +50,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C22ECB25-C49C-4B47-AD68-5804B0888D39} = {65ABD42F-4A40-4EB6-9745-0A0F72DCF737}
 		{46E9FC91-0312-4FF9-8048-C373E7166AB5} = {65ABD42F-4A40-4EB6-9745-0A0F72DCF737}
+		{894D4609-9D7B-40CC-93EB-12693E109843} = {A3F0C300-5C38-4C41-83A6-DA3446069E37}
 	EndGlobalSection
 EndGlobal
