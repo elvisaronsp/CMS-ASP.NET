@@ -12,7 +12,11 @@ namespace CMS.Services.App_Start
     using Ninject.Web.Common;
     using DataServices.Contracts;
     using DataServices;
-    public static class NinjectConfig 
+    using Data;
+    using Ninject.Extensions.Conventions;
+    using CMS.Common.Constants;
+    using Infrastructure;
+    public static class NinjectConfig
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
@@ -46,6 +50,7 @@ namespace CMS.Services.App_Start
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
+                ObjectFactory.Initialize(kernel);
                 RegisterServices(kernel);
                 return kernel;
             }
@@ -62,7 +67,13 @@ namespace CMS.Services.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IMenuService>().To<MenuService>();
+            kernel.Bind<IDbContext>().To<CMSDbContext>().InRequestScope();
+
+            kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
+
+            kernel.Bind(c => c.From(Assemblies.DataServices)
+            .SelectAllClasses()
+            .BindDefaultInterface());
         }        
     }
 }

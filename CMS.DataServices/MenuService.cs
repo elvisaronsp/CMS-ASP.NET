@@ -13,9 +13,9 @@
     {
         private readonly IRepository<Menu> db;
 
-        public MenuService()
+        public MenuService(IRepository<Menu> db)
         {
-            this.db = new EfGenericRepository<Menu>(new CMSDbContext());
+            this.db = db;
         }
 
         public Guid Add(Menu menu)

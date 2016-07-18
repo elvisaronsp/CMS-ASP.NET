@@ -88,7 +88,7 @@ namespace CMS.Services.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = menu.Id }, menu);
+           // return CreatedAtRoute("DefaultApi", new { id = menu.Id }, menu);
         }
 
         // DELETE: api/Menus/5

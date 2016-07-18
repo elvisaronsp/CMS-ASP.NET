@@ -6,7 +6,7 @@
 
     public class EfGenericRepository<T> : IRepository<T> where T : class
     {
-        public EfGenericRepository(CMSDbContext context)
+        public EfGenericRepository(IDbContext context)
         {
             if (context == null)
             {
@@ -19,7 +19,7 @@
 
         protected IDbSet<T> DbSet { get; set; }
 
-        protected CMSDbContext Context { get; set; }
+        protected IDbContext Context { get; set; }
 
         public virtual IQueryable<T> All()
         {
@@ -83,6 +83,7 @@
         {
             return this.Context.Set<T>().Attach(entity);
         }
+
 
         public virtual void Detach(T entity)
         {
