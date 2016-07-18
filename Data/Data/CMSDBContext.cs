@@ -25,7 +25,6 @@ namespace Data
             return new CMSDbContext();
         }
 
-        public System.Data.Entity.DbSet<CMS.Models.ApplicationUser> ApplicationUsers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
