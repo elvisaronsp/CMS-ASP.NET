@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Service", "CMS.Services\CMS.Service.csproj", "{C5811549-2D3F-420C-80C1-78818796B535}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.API", "CMS.Services\CMS.API.csproj", "{C5811549-2D3F-420C-80C1-78818796B535}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{65ABD42F-4A40-4EB6-9745-0A0F72DCF737}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B55E97D7-0B91-4CD9-9568-0913626F9181}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.API.Test", "CMS.API.Test\CMS.API.Test.csproj", "{AF366209-2799-4E64-94E5-0352AFDADFAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Client", "CMS.Client\CMS.Client.csproj", "{B7C7AF80-730A-472A-AFA8-BE66B10C4303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{AF366209-2799-4E64-94E5-0352AFDADFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF366209-2799-4E64-94E5-0352AFDADFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF366209-2799-4E64-94E5-0352AFDADFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C7AF80-730A-472A-AFA8-BE66B10C4303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C7AF80-730A-472A-AFA8-BE66B10C4303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C7AF80-730A-472A-AFA8-BE66B10C4303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C7AF80-730A-472A-AFA8-BE66B10C4303}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

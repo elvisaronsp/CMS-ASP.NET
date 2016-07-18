@@ -1,10 +1,10 @@
-﻿namespace CMS.Services.App_Start
+﻿namespace CMS.API.App_Start
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using CMS.Services.Infrastructure;
+    using CMS.API.Infrastructure;
     using AutoMapper;
     using Infrastructure.Mapping;
     public static class AutoMapperConfig

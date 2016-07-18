@@ -1,4 +1,4 @@
-﻿namespace CMS.Services
+﻿namespace CMS.API
 {
     using System;
     using Microsoft.AspNet.Identity;
@@ -6,8 +6,8 @@
     using Microsoft.Owin.Security.Cookies;
     using Microsoft.Owin.Security.OAuth;
     using Owin;
-    using CMS.Services.Providers;
-    using CMS.Services.Models;
+    using CMS.API.Providers;
+    using CMS.API.Models;
     using Data;
     public partial class Startup
     {

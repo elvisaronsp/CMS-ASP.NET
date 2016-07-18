@@ -1,4 +1,4 @@
-﻿namespace CMS.Services.Infrastructure.Mapping
+﻿namespace CMS.API.Infrastructure.Mapping
 {
     using AutoMapper;
 

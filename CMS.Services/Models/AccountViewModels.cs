@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CMS.Services.Models
+namespace CMS.API.Models
 {
     // Models returned by AccountController actions.
 

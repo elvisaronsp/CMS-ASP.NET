@@ -13,12 +13,12 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using CMS.Services.Models;
-using CMS.Services.Providers;
-using CMS.Services.Results;
+using CMS.API.Models;
+using CMS.API.Providers;
+using CMS.API.Results;
 using CMS.Models;
 
-namespace CMS.Services.Controllers
+namespace CMS.API.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

@@ -80,6 +80,7 @@
     <Compile Include="TestObjectFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,9 +95,9 @@
       <Project>{c22ecb25-c49c-4b47-ad68-5804b0888d39}</Project>
       <Name>CMS.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CMS.Services\CMS.Service.csproj">
+    <ProjectReference Include="..\CMS.Services\CMS.API.csproj">
       <Project>{c5811549-2d3f-420c-80c1-78818796b535}</Project>
-      <Name>CMS.Service</Name>
+      <Name>CMS.API</Name>
     </ProjectReference>
     <ProjectReference Include="..\Data\Data\CMS.Data.csproj">
       <Project>{46e9fc91-0312-4ff9-8048-c373e7166ab5}</Project>

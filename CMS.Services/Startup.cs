@@ -4,15 +4,16 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(CMS.Services.Startup))]
+[assembly: OwinStartup(typeof(CMS.API.Startup))]
 
-namespace CMS.Services
+namespace CMS.API
 {
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+
         }
     }
 }

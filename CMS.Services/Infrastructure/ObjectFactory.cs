@@ -1,4 +1,4 @@
-﻿namespace CMS.Services.Infrastructure
+﻿namespace CMS.API.Infrastructure
 {
     using Ninject;
 

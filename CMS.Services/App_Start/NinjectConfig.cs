@@ -1,7 +1,7 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(CMS.Services.App_Start.NinjectConfig), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(CMS.Services.App_Start.NinjectConfig), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(CMS.API.App_Start.NinjectConfig), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(CMS.API.App_Start.NinjectConfig), "Stop")]
 
-namespace CMS.Services.App_Start
+namespace CMS.API.App_Start
 {
     using System;
     using System.Web;

@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace CMS.Services
+namespace CMS.API
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

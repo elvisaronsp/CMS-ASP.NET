@@ -13,7 +13,7 @@ using Data;
 using CMS.DataServices.Contracts;
 using CMS.DataServices;
 
-namespace CMS.Services.Controllers
+namespace CMS.API.Controllers
 {
     public class MenusController : ApiController
     {

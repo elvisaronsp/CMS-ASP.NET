@@ -30,11 +30,6 @@
         public Menu GetById(Guid id)
         {
             Menu menu = db.GetById(id);
-            if (menu == null)
-            {
-                return null;
-            }
-
             return menu;
         }
 

@@ -1,4 +1,4 @@
-﻿namespace CMS.Services
+﻿namespace CMS.API
 {
     using System;
     using System.Collections.Generic;

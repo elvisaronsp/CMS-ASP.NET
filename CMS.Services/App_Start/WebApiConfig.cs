@@ -1,4 +1,4 @@
-﻿namespace CMS.Services
+﻿namespace CMS.API
 {
     using System.Web.Http;
     using Microsoft.Owin.Security.OAuth;
